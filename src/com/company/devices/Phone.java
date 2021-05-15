@@ -16,4 +16,8 @@ public class Phone extends Device {
                 + " model: " + this.model;
     }
 
+    @Override
+    public void turnOn() {
+        System.out.println("Phone is turned on");
+    }
 }
