@@ -1,5 +1,7 @@
 package com.company.devices;
 
+import com.company.Human;
+
 public class Phone extends Device {
     public final Double screenSize;
     public String os;
@@ -19,5 +21,10 @@ public class Phone extends Device {
     @Override
     public void turnOn() {
         System.out.println("Phone is turned on");
+    }
+
+    @Override
+    public boolean sell(Human seller, Human buyer, Double price) {
+        return false;
     }
 }
