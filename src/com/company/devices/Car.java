@@ -7,6 +7,6 @@ public class Car extends Device {
 
     @Override
     public void turnOn() {
-
+        System.out.println("Car is turned on");
     }
 }
