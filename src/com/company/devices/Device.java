@@ -1,11 +1,18 @@
 package com.company.devices;
 
-public class Device {
+public abstract class Device {
     public String producer;
     public String model;
+    private Integer yearOfProduction;
 
-    public void turnOn() {
-        System.out.println("hello user");
+    public Integer getYearOfProduction() {
+        return yearOfProduction;
     }
+
+    public void setYearOfProduction(Integer yearOfProduction) {
+        this.yearOfProduction = yearOfProduction;
+    }
+
+    public abstract void turnOn();
 
 }
