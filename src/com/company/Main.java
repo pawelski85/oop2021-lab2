@@ -1,6 +1,9 @@
 package com.company;
 
+import com.company.animals.Animal;
+import com.company.animals.Human;
 import com.company.devices.Car;
+import com.company.devices.Diesel;
 import com.company.devices.Phone;
 
 public class Main {
@@ -9,12 +12,18 @@ public class Main {
 
         Animal dog = new Animal("dog");
 
+        Human humanBuyer = new Human(5.0);
+        humanBuyer.cash=5.0;
+
+
         dog.name = "Szarik";
 
         Human me = new Human(1000.0);
         me.firstName = "Kacper";
         me.lastName = "Warda";
         me.pet = dog;
+        me.cash=10.0;
+
 
         Phone onePlus = new Phone("onePlus",
                 "8Pro",
@@ -30,11 +39,14 @@ public class Main {
 
         onePlus.turnOn();
 
-        Car fiat = new Car();
+        Car fiat = new Diesel();
         fiat.engineSize = 1.9;
         fiat.fuelType = "disel";
         fiat.producer = "Fiat";
         fiat.model = "Bravo";
+
+        me.car=fiat;
+        me.phone=iPhone6;
 
         System.out.println(iPhone6.os);
         System.out.println(iPhone6.screenSize);
@@ -51,6 +63,13 @@ public class Main {
         System.out.println(me.getClass().getSuperclass());
         System.out.println(me.getClass().getSuperclass().getSuperclass());
         System.out.println(me.getClass().getSuperclass().getSuperclass().getSuperclass());
+
+
+        fiat.sell(me,humanBuyer, 2.0);
+        iPhone6.sell(me,humanBuyer,1.0);
+
+        dog.feed();
+        dog.feed(20.0);
 
     }
 }

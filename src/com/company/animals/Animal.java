@@ -1,6 +1,6 @@
-package com.company;
+package com.company.animals;
 
-public class Animal {
+public class Animal implements Feedable {
     final static Double DEFAULT_DOG_WEIGHT = 6.0;
     public String name;
     final static Double DEFAULT_CAT_WEIGHT = 1.0;
@@ -32,10 +32,16 @@ public class Animal {
         System.out.println(weight);
     }
 
-    void feed(Double foodWeight) {
+    @Override
+    public void feed() {
+
+    }
+
+    public void feed(Double foodWeight) {
         weight += foodWeight;
         System.out.println("thx for food, bro");
         System.out.println("my weight is now " + weight);
+
     }
 
     String returnSpeciesAndName() {
@@ -45,4 +51,7 @@ public class Animal {
     String returnNameAndOwner(String owner) {
         return name + " " + owner;
     }
+
+
+
 }
