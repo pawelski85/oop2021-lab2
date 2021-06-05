@@ -15,4 +15,12 @@ public abstract class Device implements Sellable {
 
     public abstract void turnOn();
 
+    @Override
+    public String toString() {
+        return "Device{" +
+                "producer='" + producer + '\'' +
+                ", model='" + model + '\'' +
+                ", yearOfProduction=" + yearOfProduction +
+                '}';
+    }
 }
